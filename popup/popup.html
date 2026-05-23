@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MindVault AI</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container glass">
+    <header>
+      <h1>🧠 MindVault AI</h1>
+      <nav>
+        <button id="tab-memory" class="active">Memory</button>
+        <button id="tab-focus">Focus</button>
+      </nav>
+    </header>
+
+    <!-- Memory Tab -->
+    <main id="view-memory" class="view active">
+      <div class="search-box">
+        <input type="text" id="ai-search" placeholder="Ask AI (e.g., 'React articles from today')">
+      </div>
+      <div id="memory-list" class="scroll-area">
+        <!-- Injected via JS -->
+      </div>
+    </main>
+
+    <!-- Focus Analytics Tab -->
+    <main id="view-focus" class="view hidden">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h3>Total Time</h3>
+          <p id="stat-time">0h 0m</p>
+        </div>
+        <div class="stat-card">
+          <h3>Focus Score</h3>
+          <p id="stat-score">100%</p>
+        </div>
+      </div>
+      
+      <div class="alerts">
+        <p id="stat-switches">Tab Switches: <span>0</span></p>
+        <p id="stat-doomscroll">Doomscroll Alerts: <span>0</span></p>
+      </div>
+      
+      <div class="chart-container">
+        <h3>Top Sites</h3>
+        <div id="css-chart" class="css-chart">
+          <!-- Injected via JS -->
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
